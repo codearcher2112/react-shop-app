@@ -1,8 +1,21 @@
+import { motion } from 'framer-motion';
+
 const ProductDetails = () => {
     return (
-        <div className="product-details">
+        <motion.div
+            className="product-details"
+            initial={{
+                opacity: 0
+            }}
+            animate={{
+                opacity: 1
+            }}
+            exit={{
+                opacity: 0
+            }}
+        >
             Product Details Page
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 // Pages
 import Home from './pages/Home.jsx';
@@ -15,10 +16,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/product/:id' element={<ProductDetails />} />
-        </Routes>
+        <AnimatePresence initial={false}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/product/:id' element={<ProductDetails />} />
+          </Routes>
+        </AnimatePresence>
         <Footer />
       </BrowserRouter>
     </div>
