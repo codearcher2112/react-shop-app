@@ -1,8 +1,14 @@
+import { useContext, } from 'react';
+import { ProductContext, } from '../contexts/ProductContext.jsx';
+
 const Home = () => {
+    const { products } = useContext(ProductContext);
+    console.log(products);
+
     return (
-        <div className="home">
+        <main className="home">
             Home Page
-        </div>
+        </main>
     )
 }
 
