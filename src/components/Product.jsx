@@ -1,8 +1,8 @@
 // import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-const Product = ({product}) => {
-    const {id, image, category, title, price} = product;
+const Product = ({ product }) => {
+    const { id, image, category, title, price } = product;
 
     return (
         <div className="product-item bg-amber-100">
