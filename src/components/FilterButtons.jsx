@@ -10,7 +10,7 @@ const FilterButtons = ({ active, handleClick }) => {
     ];
 
     return (
-        <div className="sticky top-[86px] flex justify-center items-center gap-4 py-5 px-5 bg-white">
+        <div className="sticky top-[86px] flex justify-center items-center gap-4 py-5 px-5">
             {categories.map(item => {
                 return (
                     <button
