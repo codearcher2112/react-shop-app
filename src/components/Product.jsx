@@ -1,8 +1,11 @@
-// import { useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { BasketItemContext } from '../contexts/BasketItemContext.jsx';
 
 const Product = ({ product }) => {
     const { id, image, category, title, price } = product;
+
+    const { addToBasket } = useContext(BasketItemContext);
 
     return (
         <div className="product-item shadow-lg">
@@ -30,7 +33,11 @@ const Product = ({ product }) => {
             </div>
 
             <div className="product-item__buttons-warpper">
-                <button type="button" className="product-item__button uppercase">
+                <button
+                    type="button"
+                    className="product-item__button uppercase"
+                    onClick={() => addToBasket(product, id)}
+                >
                     Add to cart
                 </button>
 

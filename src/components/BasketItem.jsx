@@ -1,7 +1,8 @@
-const BasketItem = () => {
+const BasketItem = ({ item }) => {
+    const { id, title, image, price, amount } = item;
     return (
         <div className="basket__item">
-            Basket Item Component
+            {title}
         </div>
     )
 }
