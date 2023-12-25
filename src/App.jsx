@@ -10,6 +10,7 @@ import ProductDetails from './pages/ProductDetails.jsx';
 import Header from './components/Header.jsx';
 // import Hero from './components/Hero.jsx';
 import Footer from './components/Footer.jsx';
+import Basket from './components/Basket.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           </Routes>
         </AnimatePresence>
         <Footer />
+        <Basket />
       </BrowserRouter>
     </div>
   )
