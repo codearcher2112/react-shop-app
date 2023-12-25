@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     const { id, image, category, title, price } = product;
 
     return (
-        <div className="product-item bg-amber-100">
+        <div className="product-item shadow-lg">
             <div className="product-item__image-wrapepr w-full aspect-square">
                 <img className="product-item__image block w-full h-full object-contain"
                      src={image}
