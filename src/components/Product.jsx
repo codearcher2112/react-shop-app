@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BasketItemContext } from '../contexts/BasketItemContext.jsx';
+import { motion } from 'framer-motion';
 
 const Product = ({ product }) => {
     const { id, image, category, title, price } = product;
@@ -8,7 +9,21 @@ const Product = ({ product }) => {
     const { addToBasket } = useContext(BasketItemContext);
 
     return (
-        <div className="product-item shadow-lg">
+        <motion.div
+            className="product-item shadow-lg"
+            key={id}
+            layout
+            initial={{
+                opacity: 0
+            }}
+            animate={{
+                opacity: 1
+            }}
+            exit={{
+                opacity: 0
+            }}
+            transition={{ duration: 0.4 }}
+        >
             <div className="product-item__image-wrapepr w-full aspect-square">
                 <img className="product-item__image block w-full h-full object-contain"
                      src={image}
@@ -45,7 +60,7 @@ const Product = ({ product }) => {
                     Learn More
                 </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
